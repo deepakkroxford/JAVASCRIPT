@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai OR Code </title>
+</head>
+<style>
+    .photoshop {
+        display: grid;
+        margin: 10px;
+
+    }
+</style>
+
+<body style="background-color: antiquewhite;">
+
+    <h2>Amazing image</h2>
+    <div style="display: grid;">
+        <ul id="images">
+            <li> <img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="photoshop"></li>
+            <br>
+            <li><img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <br>
+            <li><img width="200px" id="river"
+                    src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <br>
+            <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li> onclick="alert('owl hu mai')
+            <br>
+            <li><img width="200px" id="prayer"
+                    src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <br>
+            <li><a style="color: brown;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+
+    //when we use onclic it give less feature as compare to the event listiner
+    // document.getElementById("owl").onclick=function()
+    // {
+    //     alert("My name is Owl")
+    // }
+
+    //attachEvent()
+    //jQuery -on
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     alert("owl clicked again")
+    //     console.log(e)
+    // },false)
+
+    // document.getElementById('images').addEventListener('click',function(e){
+
+    //     console.log("clicke inside the ul")
+    // },true)
+
+    // document.getElementById('owl').addEventListener('click',function(x){
+    //     console.log("clicke on owl")
+    //     x.stopPropagation()
+    // },true)
+
+    // document.getElementById("google").addEventListener('click', function(y){
+    //     y.preventDefault();
+    //     y.stopPropagation();
+    //     console.log("google click");
+
+
+    // },false)
+
+    document.querySelector("#images").addEventListener('click', function (t) {
+        console.log(t.target.parentNode)
+        console.log(t.target.tagName)
+        if (t.target.tagName === 'IMG') {
+            let removeit = t.target.parentNode
+            removeit.remove();
+        }
+
+    })
+</script>
+
+</html>
