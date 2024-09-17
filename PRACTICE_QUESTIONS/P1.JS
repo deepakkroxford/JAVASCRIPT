@@ -151,7 +151,6 @@ else {
 var a = 12;
 var b = 17;
 var c = 89;
-
 //using the arrow function 
 const findmax = (a, b, c) => {
     if (a > b && a > c) {
@@ -164,9 +163,7 @@ const findmax = (a, b, c) => {
         console.log(`the number c ${c} is greater`)
     }
 }
-
 findmax(a, b, c);
-
 //we can also find using the math.max method
 var final = Math.max(a, b, c);
 console.log(final)
@@ -189,23 +186,16 @@ console.log(final)
 // console.log(product)
 
 //using recursion 
-
-var number =5;
-var product=1;
-function fact(n)
-{
- if(n>number)
- {
-    return;
- }
-  var tmp = product;
-   product = product*n;
-   console.log(tmp +" x " +n+ " = " +product)
-   n++;
-   fact(n);
+var number = 5;
+var product = 1;
+function fact(n) {
+    if (n > number) {
+        return;
+    }
+    var tmp = product;
+    product = product * n;
+    console.log(tmp + " x " + n + " = " + product)
+    n++;
+    fact(n);
 }
-
 fact(1);
-
-
-

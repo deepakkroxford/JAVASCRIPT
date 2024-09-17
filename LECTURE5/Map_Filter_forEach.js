@@ -59,7 +59,6 @@ const filtermarks = stumarks.filter(function (val)
 
 console.log(filtermarks);
 
-
 let n = prompt("enter the value of n ");
 let zz =[];
 for(let i=1;i<=n;i++)
@@ -73,6 +72,8 @@ let sumxx = zz.reduce((sum,cur)=>{
 });
 
 console.log(sumxx)
+
+
 
 
 
