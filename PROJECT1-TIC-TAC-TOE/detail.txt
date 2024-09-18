@@ -1,0 +1,5 @@
+In this project we learn how to implement our basic knowlege of the 
+Javascript and css and html
+
+This project is the simple game we already paly during our childhood 
+
