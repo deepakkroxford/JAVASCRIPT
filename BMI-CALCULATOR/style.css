@@ -1,0 +1,57 @@
+*{
+margin: 0px;
+padding: 0px;
+}
+
+body{
+    margin-top: 0 auto;
+    background-color: bisque;
+}
+#container{
+    height: 200px;
+    display: flex-box;
+    background-color: rgb(179, 179, 253);
+    justify-content: center;
+    text-align: center;
+    color: rgb(22, 22, 22);
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 5px solid black;
+    border-radius: 8px;
+    
+}
+#height-field{
+    text-align: center;
+    justify-content: center;
+    padding: 0 auto;
+    margin: 0 auto;
+    /* font-size: large; */
+}
+#weight-field{
+   
+    text-align: center;
+    justify-content: center;
+    padding: 0 auto;
+    margin: 0 auto;
+    /* font-size:large; */
+}
+#Calculate{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+#answer{
+    color: brown;
+    margin-top: 30px;
+    text-align: center;
+}
+#condition
+{
+color: rgb(0, 8, 255);
+margin-top: 20px;
+text-align: center;
+}
