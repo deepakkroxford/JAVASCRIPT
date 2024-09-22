@@ -17,3 +17,6 @@ document.querySelector("#stop").addEventListener('click', function () {
     console.log("it stop")
     clearTimeout(chnageme);
 })
+
+
+
