@@ -96,7 +96,7 @@ async function consumePromiseFive() {
         console.log(response);
     }
     catch {
-        console.log("error")
+        console.log("error") 
     }
 }
 consumePromiseFive();
