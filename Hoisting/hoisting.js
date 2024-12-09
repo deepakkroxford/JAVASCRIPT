@@ -1,111 +1,89 @@
-
-
-
 function one() {
-    const username = 'Histesh'
+    const username = 'Histesh';
+    console.log("Parent function only");
 
-    console.log("parent only")
-    //this function can access the parent class varibale 
+    // Nested function can access variables from the parent function due to closure
     function two() {
-
         const website = 'youtube';
-        console.log(username);
+        console.log(username); // Accessing parent function's variable
     }
-    // console.log(website) this will give the error
-    /*
-    Becaue we can not acess the website out of the block beacuse the 
-    the const have the block level scope
-    */
 
-
+    // The following line will cause an error:
+    // console.log(website);
+    // Reason: 'website' is declared using const, which has block-level scope
 }
 
-
-// if we call the parent class so it only call the parent not the child  
-one();
-
+one(); // Calls the parent function 'one'. It does not call the nested function 'two'.
 
 if (true) {
     const username = 'deepak';
     if (username === 'deepak') {
         const website = 'youtube';
-        console.log(username + website)
+        console.log(username + website); // Outputs: deepakyoutube
     }
 
-    //this will also give the error  
-    //console.log(website)
+    // The following line will cause an error:
+    // console.log(website);
+    // Reason: 'website' is block-scoped due to const declaration
 }
 
-//this will give the error because we can not access the const username outside the block of code
-// beacause we inisilize inside the block
-// console.log(username)
+// The following line will cause an error:
+// console.log(username);
+// Reason: 'username' is block-scoped and not accessible outside the if-block
 
+// ++++++++++++++++++++++ Hoisting Concept ++++++++++++++++++++
 
-
-// ++++++++++++++++++++++ interesting ++++++++++++++++++++
-console.log(addone(5));
+// Function declarations are hoisted, so this works
+console.log(addone(5)); // Output: 6
 function addone(num) {
     return num + 1;
 }
 
-
-
-
-
-console.log(addtwo(5));
+// Function expressions are not hoisted, so this causes an error
+// console.log(addtwo(5));
 const addtwo = function (num) {
     return num + 2;
-}
+};
 
-
-//Hoistiong Concept
-
-console.log(a); // output undefined
+// Hoisting with variables
+console.log(a); // Output: undefined (var declarations are hoisted but uninitialized)
 var a = 10;
 
-console.log(b); // it give error we can not access the variable before the declaration
+// The following line will cause an error:
+// console.log(b);
+// Reason: 'b' is declared using let, which is in the Temporal Dead Zone (TDZ)
 let b = 50;
 
-console.log(c) // it give the error we can not acces the variable before the declareation 
+// The following line will cause an error:
+// console.log(c);
+// Reason: 'c' is declared using const, which is also in the Temporal Dead Zone (TDZ)
 const c = 70;
 
 /*
-the javascript treat the const and let diffrent way it put the variable in the tdz
-Temporal Dead Zone (TDZ)
-
-It is a specific region within a scope where variables exist but cannot be 
-accessed until they are assigned a value.
+Temporal Dead Zone (TDZ):
+- A specific region within a scope where variables exist but cannot be accessed 
+  until they are assigned a value.
+- Applies to variables declared using 'let' and 'const'.
 */
 
-
-hii(); // it will not give the error
-//function defination
-//function declaration
-function hii()
-{
-    console.log("hi how are u")
+// Function declarations are hoisted, so this works
+hii(); // Output: "hi how are u"
+function hii() {
+    console.log("hi how are u");
 }
 
+// Function expressions are not hoisted, so this causes an error:
+// sayhii();
+// Reason: The function is assigned to a variable using const, and const variables 
+// are not initialized until their declaration line is executed.
+const sayhii = function () {
+    console.log("hi brother");
+};
 
-sayhii() //it will give the error
-//function defination
-//function expression 
-const sayhii = function ()
-{
-    console.log("hi brother")
-}
-
-
-
-sayhiii()
-
-//function defination
-//fucntion expression
-var sayhiii =function()
-{
-    console.log("this is var hii")
-}
-
-
-
-
+// The following line will also cause an error:
+// sayhiii();
+// Reason: Function expressions assigned to var are hoisted but initialized to undefined.
+// Calling them before initialization causes an error.
+var sayhiii = function () {
+    console.log("this is var hii");
+};

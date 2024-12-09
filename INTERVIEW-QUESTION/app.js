@@ -23,7 +23,7 @@
 // let b=[20];
 // console.log(a==b) 
 // console.log(a===b)
- 
+
 //the answer is false for both beacuse the address is diffrence
 
 //question 4;
@@ -61,7 +61,7 @@
 
 //Question 8
 
-const set = new Set([1,1,2,3,4]);
+const set = new Set([1, 1, 2, 3, 4]);
 console.log(set)
 
 //question 9
@@ -84,7 +84,59 @@ console.log(set)
 // //we can not detete the data we can only delete the property inside the data 
 // console.warn(data) // remain same
 
-const data = ["Peter","Deepak","vishal"]
+const data = ["Peter", "Deepak", "vishal"]
 const [y] = data;
- console.log(y); // it give the first peter
+console.log(y); // it give the first peter
 
+
+/*
+Question: Can you give the example of the foreach and map methods. and tell the diffrences
+*/
+
+
+// forEach example
+let arr = [1, 2, 3, 4, 5, 56, 7];
+
+//foreach does not return anything it modifies the same array.
+const ans = arr.forEach((value, index) => {
+    arr[index] = value * 2; // Modify each element by multiplying it by 2
+});
+
+console.log(ans); // it give undefiend because it not return anything 
+
+//map example
+
+//map return the new modified array when we perform the operation on it 
+let mapans = arr.map((value) => {
+    return value * 2; // Create a new array with each element multiplied by 2
+})
+console.log(mapans)
+
+//How this code is used this keyword in the javascript 
+const person = {
+    name: 'John',
+    age: 30,
+    city: 'New York',
+    job: {
+        jobrole: 'forntend developer',
+        experience: 2,
+        company: 'XYZ Corp'
+    },
+
+    printdetail: function () {
+        console.log(`my name is ${this.name} and age is ${this.age} and city is ${this.city} and jobrole is ${this.job.jobrole} and experience is ${this.job.experience}`);
+    }
+}
+person.printdetail();
+
+
+//create a new input box if the age is less than 18 we have to show the 
+
+
+let a= 50;
+
+if(true){
+    let a = 10;
+    console.log(a);  // 10
+}
+console.log(a);  // 50
