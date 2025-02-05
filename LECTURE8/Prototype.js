@@ -27,7 +27,7 @@ const Amansing1={
 }
 
 
-const Amansing2={
+const Amansing2x={
     salry:823323,
 }
 
