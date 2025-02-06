@@ -2,8 +2,6 @@
 Basic Console Uses 10 questions
 */
 
-const { XCircle } = require("lucide-react");
-
 // Q1
 console.log("My name is deepak kumar singh","i am 22 year old");
 // Q2
@@ -182,5 +180,182 @@ for(let key in obj){
 }
 
 
+/*
+Array 10 questions
+*/
 
+//Q31 create an array of your top 5 faviourites movie
 
+var array= ["Spartan300","Kantara","Sonic","Lucy","Mission Imposible"];
+for(let i=0; i<array.length;i++)
+{
+    console.log("my "+(i+1)+" favorite movie is "+array[i]);
+}
+//Q32 find and log the second element of the array
+console.log("second element of the array is ",array[1]);
+//Q33 add a new movie to the start of the array using unshift function
+array.unshift("Gladiator");
+array.unshift("Super30");
+console.log("updated array is ",array);
+//Q34 Remove the last element of the array and log the updated array
+array.pop();
+array.pop();
+console.log("updated array is ",array);
+//Q35 use slice() to extract the first three elements of the array 
+console.log(array.slice(0,3)); // in this 0,1,2 index element is returned it does not take the 3 index elements 
+//Q36 find the index of the specified element in an array using the indexof()
+console.log(array.indexOf("Kantara")); // it will return the index of the first occurrence of the element
+//Q37 check the value exists in an array using .include()
+console.log(array.includes("kings")); // it will return true if value exists other wise false 
+//Q38 combine two array [1,2] and [3,4] using concat
+let arr1=[1,2,3,4,"deepak kumar sing", ,];
+console.log(arr1.length)// output will be 6 
+let arr2 = [5,6,7,8,9,"aman singh"];
+console.log(arr1.concat(arr2));
+//39 sort an array in acending order [5,4,3,2,1];
+
+let arr3=[5,6,1,21,3,7,6,9];
+
+for(let i=0;i<arr3.length;i++)
+{
+    for(let j=0;j<arr3.length-i-1;j++)
+    {
+        if(arr3[j]>arr3[j+1])
+        {
+            let temp = arr3[j];
+            arr3[j]=arr3[j+1];
+            arr3[j+1]=temp;
+        }
+    }
+}
+console.log(arr3);
+
+//40 write a program that create a copy of the array without mutating the original
+let arr4=[1,2,3,4,5,6,7,8];
+let copyArray = [...arr4];
+console.log(copyArray);
+
+/*
+function 10 questions
+*/
+//41 write a function to check the number is odd or even 
+
+function oddEven(num)
+{
+    if(num%2==0)
+    {
+        return "even";
+    }
+    else
+    {
+        return "odd";
+    }
+}
+console.log(oddEven(45));
+
+//Q42 Create a function to calculate the area of a circle with a given radius 
+
+let areaOfCirlce=(radius)=>{
+  
+    return `The given radius is ${radius} and area of circle is ${Math.PI*radius*radius}`;
+}
+
+console.log(areaOfCirlce(5));
+
+//Q43 write a function that accept an array and return the sum of it
+
+const sumOfGivenArray= (arr)=>{
+    let sum =0;
+    for(let i=0;i<arr.length;i++){
+        sum +=arr[i];
+    }
+    return `the sum of given array is ${sum}`;
+}
+
+let sumarray =[1,234,2321,11,1,2,42,13,3];
+console.log(sumOfGivenArray(sumarray));
+
+//Q44 write a function to check the string start with specific character or not
+
+function startsWithChar(str,char)
+{      str=str.toLowerCase()
+    return str.charAt(0) === char;
+}
+console.log(startsWithChar("Hello","h"));
+
+//Q45 wrte a function to find the maximum of two number
+
+function maxiumum(a,b)
+{
+    if(a>b)
+    {
+        return `a is greater than b`
+    }
+    else{
+        return `b is greater than a`
+    }
+
+}
+
+console.log(maxiumum(4,56))
+
+// Q46 Create a function that takes a number and return its factorial 
+function factorial(num)
+{
+    if(num==1)
+    {
+        return 1;
+    }
+    else{
+        return num*factorial(num-1);
+    }
+}
+console.log(factorial(5));
+
+//Q47 create a function that takes a string and return the reverse of the string
+
+function reverseString(str)
+{
+    let reversed = "";
+    for(let i=str.length-1;i>=0;i--)
+    {
+        reversed += str[i];
+    }
+    return `the reverse of the given string ${str} is ${reversed}`;
+
+    /*
+    return str.split("").reverse().join("");
+    */
+}
+console.log(reverseString("Deepak Kumar singh"));
+
+//Q48 create a function to find the maximum number in the array
+function findMax(arr)
+{
+    let max = arr[0];
+    for(let i=1;i<arr.length;i++)
+    {
+        if(arr[i]>max)
+        {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+console.log(findMax([43,231,21,22,4,2,1,4,22]));
+
+//Q49 write a function that convert the string to kebab-case 
+
+function kebab(str)
+{
+    return str.replaceAll(" ","-");
+    // return str.split("").join("-");
+}
+console.log(kebab("Deepak Kumar Singh"));
+
+//Q50 crate a function that print hello world 
+function printHelloWorld()
+{
+    console.log("Hello World");
+}
+printHelloWorld();
