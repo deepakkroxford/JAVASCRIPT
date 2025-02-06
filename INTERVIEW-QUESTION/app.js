@@ -140,3 +140,15 @@ if(true){
     console.log(a);  // 10
 }
 console.log(a);  // 50
+
+
+
+// use of slice and splice 
+
+let arr4 =[1,2,3,4,5,5,6,6,7,73221];
+console.log(arr4.slice(0,4));
+
+console.log(arr4.splice(2,2,23421));
+console.log(arr4);
+
+
