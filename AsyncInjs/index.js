@@ -30,17 +30,16 @@ function getdata(){
    
 }
 
-function createdata(newdata){
+function createdata(newdata, callback){
     setTimeout(()=>{
         datas.push(newdata);
-        console.log(datas);
-        
-    },2000)
+        console.log("New data added:", datas);
+        callback();  
+    }, 2000);
 }
-createdata({name:"rahul singh",age:23,roll:"1OX21IS033",CGPA:9.12});
-getdata();
 
-// createdata({name:"rahul singh",age:23,roll:"1OX21IS033",CGPA:9.12},getdata());
+//createdata({name:"rahul singh",age:23,roll:"1OX21IS033",CGPA:9.12});
+createdata({name:"rahul singh",age:23,roll:"1OX21IS033",CGPA:9.12},getdata);
 /*
  function createdata(newdata,callback){
     setTimeout(()=>{
@@ -65,7 +64,7 @@ for solving we can pass the getdata() as argument inthe createdata function
 
 
 
-// use of the promises 
+// // use of the promises 
 function createDataUsingPromise(newdata){
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
@@ -81,14 +80,6 @@ function createDataUsingPromise(newdata){
        getdata },2000);
     });
 }
-
 createDataUsingPromise({name:"rahul singh",age:23,roll:"1OX21IS033",CGPA:9.12}).
 then(getdata).
 catch((error)=>console.log(error));
-
-
-
-
-
-
-

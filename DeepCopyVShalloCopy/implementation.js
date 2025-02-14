@@ -121,3 +121,4 @@ console.log(user3)
 // if the change done in one object doesnot reflect one other object 
 
 
+console.log(b);
