@@ -353,7 +353,7 @@ function kebab(str)
 }
 console.log(kebab("Deepak Kumar Singh"));
 
-//Q50 crate a function that print hello world 
+//Q50 create a function that print hello world 
 function printHelloWorld()
 {
     console.log("Hello World");

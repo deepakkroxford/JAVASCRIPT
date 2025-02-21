@@ -1,8 +1,3 @@
-/*
-function expression ()
-*/
-
-
 
 // function expression
 expression(); // we can hoist the function expression but not the function declaration
@@ -10,7 +5,6 @@ function expression ()
 {
     console.log("I am a function expression");
 }
-
 
 
 // declaration of function

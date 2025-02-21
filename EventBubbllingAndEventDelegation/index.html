@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling Example</title>
+    <style>
+        #grandparent {
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid blue;
+        }
+
+        #parent {
+            width: 200px;
+            height: 200px;
+            background-color: lightgreen;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid green;
+        }
+
+        #student {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="grandparent"> I am grandparent
+        <div id="parent"> I am parent 
+            <div id="student">
+                    I am student 
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("grandparent").addEventListener("click", () => {
+            console.log("Grandparent Clicked!");
+        },true);
+
+        document.getElementById("parent").addEventListener("click", () => {
+            console.log("Parent Clicked!");
+        },true);
+
+        document.getElementById("student").addEventListener("click", () => {
+            console.log("Student Clicked!");
+        },true);
+    </script>
+</body>
+</html>
