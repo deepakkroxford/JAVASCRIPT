@@ -37,3 +37,9 @@ const product ={
 }
 console.log(product)
 
+let x = null;
+console.log(typeof(x)); //object
+let y = undefined;
+console.log(typeof(y)); //undefined
+let z = NaN;    
+console.log(typeof(z)); //number

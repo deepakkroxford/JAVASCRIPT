@@ -2,7 +2,6 @@
 // console.log(a);
 // var a = 10;
 
-const { Currency } = require("lucide-react");
 
 // let age = 10;
 // if(age>18)

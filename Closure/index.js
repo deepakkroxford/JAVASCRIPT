@@ -1,6 +1,7 @@
 /*
 What is a Closure? (In Simple Words)
-A closure is a function that remembers the variables from its parent scope, even after the parent function has finished executing.
+A closure is a function that remembers the variables from its parent scope, even after the parent 
+function has finished executing.
 
 Breaking it Down Simply:
 A function inside another function → The inner function has access to the outer function’s variables.
