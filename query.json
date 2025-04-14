@@ -1,0 +1,9 @@
+[
+    {$match:{maker:"Hundai"}},
+    {$group:{_id:"$fuel_type",total_car:{$sum:1}}}
+]
+
+[
+    {$match:{maker:"Hundai"}},
+   {$project:{maker:1,model:1,fuel_type=1,_id:0}}
+]

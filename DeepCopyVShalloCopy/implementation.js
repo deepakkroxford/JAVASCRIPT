@@ -5,9 +5,9 @@ myfruits.push('Dates')
 myfruits.push('Grapes')
 /*
 so we added the two  new element in the myfruits but it also added 
-in the frutis also the reasoon is when we create the array called fruits it take memory in the space 
-and when we assisng teh value like this myfruits = fruits so in this case myfruits only refrence to fruits 
-when we add some thing in one so it change the both 
+in the fruits. the reason is when we create the array called fruits it take space in the memory 
+and when we assisng the value like this myfruits = fruits so in this case myfruits only refrence to fruits 
+when we add some thing in one so it change the both.
 */
 console.log(myfruits)
 console.log(fruits)
@@ -64,6 +64,7 @@ console.log(patner1.name)// it remain unchanged
 //now see how copy in the arrya so array is also a object internaly 
 
 const car1 =['bmw','audi','mahendra','scoda']
+// when we copy using the spread operator the memory locatio of car1 and car2 is diffrent they do not have same memory refrence
 // const car2 =[...car1]; // it copy all the element from car 1 to car2
 // console.log(car2)
 

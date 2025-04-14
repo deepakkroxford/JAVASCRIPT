@@ -2,8 +2,8 @@
 
 // let a =[];
 // let b =[];
-// console.log(a==b) 
-// console.log(a===b)
+// console.log(a==b) // false
+// console.log(a===b) // false
 
 //the reason is the memory address of the array is diffrent so it will give the false
 
@@ -86,7 +86,7 @@ console.log(set)
 
 const data = ["Peter", "Deepak", "vishal"]
 const [y] = data;
-console.log(y); // it give the first peter
+console.log(y,x); // it give the first peter
 
 
 /*

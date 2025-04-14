@@ -26,3 +26,10 @@ let lexsus = new car();
 lexsus.start();
 lexsus.running();
 lexsus.stop();
+
+let a ="sting 3+3"; 
+console.log(typeof a); 
+
+
+a =`string ${3+3}`;
+console.log(a);

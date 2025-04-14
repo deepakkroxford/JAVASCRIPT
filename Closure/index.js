@@ -68,8 +68,7 @@ it was called.
 
 Example of Lexical Scope:
 javascript
-Copy
-Edit
+
 function outer() {
     let a = 10;
     
@@ -88,8 +87,7 @@ Closures "remember" the lexical scope even after the outer function has executed
 
 Example: Closure + Lexical Scope
 javascript
-Copy
-Edit
+
 function outer() {
     let a = 10;
     
@@ -114,3 +112,10 @@ Summary:
 
 Let me know if you want more examples! 🎯
 */
+
+
+
+// IIFE (Immediately Invoked Function Expression) example:
+(function() {
+    console.log("This is an IIFE - it runs immediately!");
+})();

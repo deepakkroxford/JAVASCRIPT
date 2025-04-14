@@ -55,5 +55,12 @@ function deepak()
    var a =10;
 }
 
-console.log(a);
+console.log(a); // it will give 19 not 10.
+
+
+console.log(+true); // it will give 1
+console.log(+false); // it will give 0
+
+
+
 
